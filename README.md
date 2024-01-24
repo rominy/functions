@@ -1,5 +1,4 @@
-<img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=ReactlogoColor=white" />
-# Romin의 기능 개발
+<img src="https://img.shields.io/badge/react-61DAFB?style=flat&logo=react&logoColor=white" /> # Romin의 기능 개발
 
 ## 구현 목록
 ### 텍스트 타이핑 효과
