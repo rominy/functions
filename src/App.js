@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
-import Main from "./pages/Main";
+import Main from "./pages/Layout";
 import Navbar from "./pages/Navbar";
 
 const GlobalStyle = createGlobalStyle`
@@ -9,6 +9,10 @@ const GlobalStyle = createGlobalStyle`
 
   * {
     box-sizing: border-box;
+  }
+
+  .cursor--pointer {
+    cursor: pointer;
   }
 `;
 
@@ -18,9 +22,7 @@ function App() {
       <GlobalStyle />
 
       <Routes>
-        <Route path='/' element={<Navbar />}>
-          {/* <Route index element={<Main />} /> */}
-        </Route>
+        <Route path='/' element={<Navbar />} />
       </Routes>
     </>
   );
