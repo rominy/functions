@@ -7,25 +7,22 @@ function EnvFile(props) {
   // API Key
   const myApiKey = 'abcdefg12345';
 
-
-
-
-
-
-  
   const apiKey = process.env.REACT_APP_API_KEY;
+  const serverUrl = process.env.REACT_APP_SERVER_URL;
 
   useEffect(() => {
-    const getApi = async () => {
+    const exampleData = async () => {
       try {
-        const response = await axios.get(`https://apikey=${apiKey}`);
-        setData(response);
+        const apiResponse = await axios.get(`https://romin&apikey=${apiKey}`);
+        const tistoryApiResponse = await axios.get(`https://romin&apikey=${process.env.REACT_APP_TISTORY_API_KEY}`);
+        const frontData = await axios.post(`${serverUrl}/main`, { data });
+        const userData = await axios.post(`${serverUrl}/user`, { data: process.env.REACT_APP_DB_URL });
       } catch (error) {
         console.error(error);
       }
-    }
-    getApi();
-  }, [])
+    };
+    exampleData();
+  }, []);
 
   return (
     <div>
