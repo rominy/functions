@@ -42,6 +42,7 @@ const NavbarContainer = styled.nav`
 
 function Navbar(props) {
   const [show, setShow] = useState(0);
+  const navigate = useNavigate();
 
   // 로컬스토리지에 컴포넌트 번호를 저장하고 재렌더링 시 기존 번호 유지
   useEffect(() => {
@@ -71,6 +72,8 @@ function Navbar(props) {
           <li onClick={() => handleCommponent(5)} title='부트스트랩'>Bootstrap</li>
           <li onClick={() => handleCommponent(6)} title='.env'>.env</li>
           <li onClick={() => handleCommponent(7)} title='카카오맵'>KaKaoMap</li>
+          <li onClick={() => handleCommponent(8)} title='세계지도'>WorldMap</li>
+          <li onClick={() => navigate('/page')} title='동적 타이틀 변경'>DaynamicPageTitle</li>
         </ul>
       </div>
       <div className='outlet-box'>

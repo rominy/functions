@@ -8,6 +8,7 @@ import Modal from '../components/functions/Modal';
 import Bootstrap from '../components/functions/Bootstrap';
 import EnvFile from '../components/functions/EnvFile';
 import KakaoMap from '../components/functions/KakaoMap';
+import WorldMap from '../components/functions/WorldMap';
 
 const LayoutContainer = styled.section`
   height: 100%;
@@ -36,6 +37,8 @@ function Layout(props) {
         {show === 6 && <EnvFile />}
         {/* 카카오맵 */}
         {show === 7 && <KakaoMap />}
+        {/* amCharts4 대한민국 지도 */}
+        {show === 8 && <WorldMap />}
       </LayoutContainer>
     </>
   );

@@ -3,6 +3,7 @@ import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
 import Main from "./pages/Layout";
 import Navbar from "./pages/Navbar";
+import DaynamicPageTitle from "./components/functions/DaynamicPageTitle";
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -23,6 +24,7 @@ function App() {
 
       <Routes>
         <Route path='/' element={<Navbar />} />
+        <Route path='/?page' element={<DaynamicPageTitle />} />
       </Routes>
     </>
   );
